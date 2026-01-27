@@ -1,15 +1,14 @@
-import Intro from "./components/Intro"
-import Menu from "./components/Menu"
-import Nav from "./components/Nav"
+import { BrowserRouter, Route, Routes } from "react-router";
+import HomeLayout from "./Layout/HomeLayout";
 
 const App = () => {
   return (
-    <div className="container">
-      <Nav />
-      <Intro />
-      <Menu />
-    </div>
-  )
-}
+    <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomeLayout />} />
+        </Routes>
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;

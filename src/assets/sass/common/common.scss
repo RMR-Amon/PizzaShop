@@ -1,47 +1,53 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
-    max-width: 1253px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
+  max-width: 1253px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-html{
+html {
+  scroll-behavior: smooth;
 }
 body {
-    background: linear-gradient(245.71deg, #1E0C00 4.96%, #1F0700 33.7%, #170A00 68.41%, #1E0D00 96.42%);
-
+  background: linear-gradient(
+    245.71deg,
+    #1e0c00 4.96%,
+    #1f0700 33.7%,
+    #170a00 68.41%,
+    #1e0d00 96.42%
+  );
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
-html{
-    scrollbar-width: none;
+html {
+  scrollbar-width: none;
 }
 button {
-    border: none;
-    cursor: pointer;
-    transition: 0.5s;
-    background: linear-gradient(261.69deg, #FF5D29 12.12%, #FE9C1C 86.72%);
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+  background: linear-gradient(261.69deg, #ff5d29 12.12%, #fe9c1c 86.72%);
 
-    &:active {
-        transform: scale(0.8);
-    }
+  &:active {
+    transform: scale(0.8);
+  }
 }
 
 .title {
-    font-family: var(--mt800);
-    font-size: 69.17px;
-    color: #fff;
-    text-align: center;
+  font-family: var(--mt800);
+  font-size: 69.17px;
+  color: #fff;
+  text-align: center;
 }
