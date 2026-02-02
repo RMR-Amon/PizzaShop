@@ -1,12 +1,20 @@
-import { BrowserRouter, Route, Routes } from "react-router";
-import HomeLayout from "./Layout/HomeLayout";
+import { BrowserRouter } from "react-router";
+import Nav from "./components/Nav";
+import Intro from "./components/Intro";
+import Menu from "./components/Menu";
+import Events from "./components/Events";
+import About from "./components/About";
 
 const App = () => {
   return (
     <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomeLayout />} />
-        </Routes>
+      <Nav />
+      <Intro />
+      <main className="main">
+        <Menu />
+        <Events />
+        <About />
+      </main>
     </BrowserRouter>
   );
 };

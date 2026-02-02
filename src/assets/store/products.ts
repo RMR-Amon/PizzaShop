@@ -21,6 +21,7 @@ interface IMenu_products {
   size: IProduct_size[];
   price: number;
   amount: number;
+  Summ: number;
 }
 export const menu_products: IMenu_products[] = [
   {
@@ -50,6 +51,9 @@ export const menu_products: IMenu_products[] = [
     ],
     price: 8.35,
     amount: 0,
+    get Summ() {
+      return this.price * this.amount;
+    },
   },
   {
     id: 2,
@@ -78,6 +82,9 @@ export const menu_products: IMenu_products[] = [
     ],
     price: 7.35,
     amount: 0,
+    get Summ() {
+      return this.price * this.amount;
+    },
   },
   {
     id: 3,
@@ -106,6 +113,9 @@ export const menu_products: IMenu_products[] = [
     ],
     price: 9.35,
     amount: 0,
+    get Summ() {
+      return this.price * this.amount;
+    },
   },
   {
     id: 4,
@@ -134,6 +144,9 @@ export const menu_products: IMenu_products[] = [
     ],
     price: 8.35,
     amount: 0,
+    get Summ() {
+      return this.price * this.amount;
+    },
   },
   {
     id: 5,
@@ -162,6 +175,9 @@ export const menu_products: IMenu_products[] = [
     ],
     price: 7.35,
     amount: 0,
+    get Summ() {
+      return this.price * this.amount;
+    },
   },
   {
     id: 6,
@@ -190,6 +206,9 @@ export const menu_products: IMenu_products[] = [
     ],
     price: 6.35,
     amount: 0,
+    get Summ() {
+      return this.price * this.amount;
+    },
   },
   {
     id: 7,
@@ -218,6 +237,9 @@ export const menu_products: IMenu_products[] = [
     ],
     price: 7.35,
     amount: 0,
+    get Summ() {
+      return this.price * this.amount;
+    },
   },
   {
     id: 8,
@@ -246,5 +268,8 @@ export const menu_products: IMenu_products[] = [
     ],
     price: 8.35,
     amount: 0,
+    get Summ() {
+      return this.price * this.amount;
+    },
   },
 ];

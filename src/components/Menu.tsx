@@ -4,7 +4,6 @@ import { menu_products } from "../assets/store/products";
 
 const Menu = () => {
   const [activeBtn, setActiveBtn] = useState<number>(menu_buttons[0].id);
-
   const [products, setProducts] = useState(menu_products);
 
   const handleSizeClick = (productId: number, sizeId: number) => {
@@ -22,9 +21,23 @@ const Menu = () => {
       ),
     );
   };
-
+  function changeAmount(productId: number, type: "plus" | "minus") {
+    setProducts((prev) =>
+      prev.map((product) =>
+        productId == product.id
+          ? {
+              ...product,
+              amount:
+                type === "plus"
+                  ? product.amount + 1
+                  : Math.max(0, product.amount - 1),
+            }
+          : product,
+      ),
+    );
+  }
   return (
-    <div className="menu" id="menu">
+    <section className="menu" id="menu">
       <div className="container">
         <div className="menu__box">
           <h2 className="menu__title title">Menu</h2>
@@ -77,9 +90,19 @@ const Menu = () => {
                     </p>
 
                     <div className="product__amount--box">
-                      <button className="amount__btn--minus">-</button>
+                      <button
+                        className="amount__btn--minus"
+                        onClick={() => changeAmount(product.id, "minus")}
+                      >
+                        -
+                      </button>
                       <p className="product__amount">{product.amount}</p>
-                      <button className="amount__btn--plus">+</button>
+                      <button
+                        className="amount__btn--plus"
+                        onClick={() => changeAmount(product.id, "plus")}
+                      >
+                        +
+                      </button>
                     </div>
                   </div>
 
@@ -94,7 +117,7 @@ const Menu = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
