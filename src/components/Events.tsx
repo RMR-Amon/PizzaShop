@@ -5,7 +5,7 @@ import coffee from "../assets/images/cofee.png";
 import eggAndBacon from "../assets/images/egg and bacon.png";
 const Events = () => {
   return (
-    <section className="events">
+    <section className="events" id="Events">
       <div className="container">
         <div className="events__box">
           <div className="events__card card">
@@ -21,7 +21,7 @@ const Events = () => {
             </Link>
           </div>
           <div className="events__info">
-            <h2 className="events__title">Events</h2>
+            <h2 className="events__title title">Events</h2>
             <p className="events__text">
               There are regular events in our pizzeria that will allow you to
               eat delicious food for a lower price!

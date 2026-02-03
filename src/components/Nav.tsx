@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router";
+import { Link } from "react-router";
 import basket from "../assets/images/basket.svg";
 
 const Nav = () => {
@@ -6,12 +6,12 @@ const Nav = () => {
     <nav className="nav" id="home">
       <div className="container">
         <div className="nav__box">
-          <NavLink to="/" className="nav__logo">
+          <a href="#home" className="logo">
             pizzashop
-          </NavLink>
+          </a>
           <ul className="nav__list">
             <li>
-              <a href="/" className="nav__link">
+              <a href="#home" className="nav__link">
                 Home{" "}
               </a>
             </li>
@@ -21,12 +21,12 @@ const Nav = () => {
               </a>
             </li>
             <li>
-              <a href="#!" className="nav__link">
+              <a href="#Events" className="nav__link">
                 Events{" "}
               </a>
             </li>
             <li>
-              <a href="#!" className="nav__link">
+              <a href="#AboutUs" className="nav__link">
                 About us{" "}
               </a>
             </li>
@@ -45,7 +45,7 @@ const Nav = () => {
           </div>
         </div>
       </div>
-    </nav>  
+    </nav>
   );
 };
 

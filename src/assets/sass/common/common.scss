@@ -15,6 +15,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  overflow-x: hidden;
   background: linear-gradient(
     245.71deg,
     #1e0c00 4.96%,
@@ -50,4 +51,12 @@ button {
   font-size: 69.17px;
   color: #fff;
   text-align: center;
+}
+.logo {
+  font-family: var(--mt800);
+  font-size: 34.06px;
+  line-height: 110.00000000000001%;
+  background: linear-gradient(261.69deg, #ff6432 12.12%, #ffa228 86.72%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
