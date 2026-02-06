@@ -29,15 +29,14 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
   overflow-x: hidden;
-  background: linear-gradient(
-    245.71deg,
-    #1e0c00 4.96%,
-    #1f0700 33.7%,
-    #170a00 68.41%,
-    #1e0d00 96.42%
-  );
+  background: linear-gradient(245.71deg,
+      #1e0c00 4.96%,
+      #1f0700 33.7%,
+      #170a00 68.41%,
+      #1e0d00 96.42%);
 }
 
 a {
@@ -47,9 +46,11 @@ a {
 ul {
   list-style: none;
 }
+
 html {
   scrollbar-width: none;
 }
+
 button {
   border: none;
   cursor: pointer;
@@ -67,6 +68,7 @@ button {
   color: #fff;
   text-align: center;
 }
+
 .logo {
   font-family: var(--mt800);
   font-size: 34.06px;
