@@ -1,0 +1,27 @@
+.about {
+  &__box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .about__info--box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-content: center;
+      gap: 20px;
+      .about__pizzas__image {
+        width: 490px;
+      }
+      .about__text {
+        max-width: 459px;
+        font-family: var(--mt400);
+        font-size: 19.56px;
+        line-height: 136%;
+        color: #a3a3a3;
+      }
+    }
+    .about__main--pizza {
+      height: fit-content;
+    }
+  }
+}

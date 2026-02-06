@@ -21,18 +21,18 @@ const Nav = () => {
               </a>
             </li>
             <li>
-              <a href="#Events" className="nav__link">
+              <a href="#events" className="nav__link">
                 Events{" "}
               </a>
             </li>
             <li>
-              <a href="#AboutUs" className="nav__link">
+              <a href="#aboutus" className="nav__link">
                 About us{" "}
               </a>
             </li>
           </ul>
           <div className="nav__pages">
-            <Link to="/" aria-label="login_button" className="nav__login--btn">
+            <Link to="/login" aria-label="login_button" className="nav__login--btn">
               Log in
             </Link>
             <Link

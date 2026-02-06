@@ -1,0 +1,209 @@
+  .menu {
+    &__box {
+      .menu__title {
+        margin-top: 100px;
+      }
+
+      .menu__filter--box {
+        display: flex;
+        justify-content: space-evenly;
+
+        .menu__btn {
+          padding: 19px 54px;
+          border-radius: 100px;
+          box-shadow: 0px 9px 40px 0px #ff6b000f;
+          font-family: var(--mt500);
+          font-size: 22px;
+          background: transparent;
+          color: #fff;
+
+          &.active {
+            background: linear-gradient(90deg, #ff5d29, #ff9b1c);
+            color: white;
+          }
+        }
+      }
+
+      .menu__products--box {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 112px;
+        gap: 54px 10px;
+
+        .product {
+          position: relative;
+          padding-bottom: 23px;
+          max-width: 297px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          border-radius: 29.53px;
+          background-color: #210a01;
+          gap: 20px;
+
+          &:hover {
+            transform: scale(1.05);
+            transition: 0.7s ease-in-out;
+            box-shadow: 0 0 15px #ffa229;
+
+            .product__img {
+              transform: translate(0);
+              animation: menu_product_rotating 5s infinite ease-in-out;
+              @keyframes menu_product_rotating {
+                0% {
+                  transform: rotate(0deg);
+                }
+
+                100% {
+                  transform: rotate(1440deg);
+                }
+              }
+            }
+          }
+          &__img {
+            width: 159px;
+            height: 157px;
+            transform: translateY(-30%);
+          }
+
+          &__title {
+            font-family: var(--mt500);
+            font-size: 25.1px;
+            color: #fff;
+          }
+
+          &__text {
+            font-family: var(--m400);
+            font-size: 14.32px;
+            color: #a3a3a3;
+            text-align: center;
+          }
+
+          &__btns {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+
+            .product__btn {
+              padding: 11px 11px;
+              background: none;
+
+              color: #a3a3a3;
+              border: 1.5px solid #a3a3a3;
+              border-radius: 50%;
+
+              &.active {
+                background: linear-gradient(
+                  261.69deg,
+                  #ff5924 12.12%,
+                  #ffa229 86.72%
+                );
+                color: #fff;
+                padding: 11px 12px;
+                border: none;
+              }
+            }
+          }
+
+          .product_addIngridient--btn {
+            border: 1.5px solid #ff8a1f;
+            padding: 11px 51px;
+            border-radius: 85px;
+            color: #ff8a1f;
+            background: transparent;
+
+            font-family: var(--mt400);
+            font-size: 16.08px;
+
+            span {
+              font-family: none;
+            }
+          }
+
+          .product__purchase {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+
+            .product__price {
+              position: relative;
+              font-family: var(--mt500);
+              font-size: 25.46px;
+              color: #ffffff;
+
+              & span {
+                position: absolute;
+                top: -20%;
+                right: -20%;
+                font-family: none;
+                font-size: 20px;
+              }
+            }
+
+            .product__amount--box {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+
+              .amount__btn--plus {
+                width: 23px;
+                height: 23px;
+                font-size: 17.66px;
+                background: linear-gradient(
+                  261.69deg,
+                  #ff5924 12.12%,
+                  #ffa229 86.72%
+                );
+                border-radius: 50%;
+                color: #fff;
+              }
+
+              .amount__btn--minus {
+                width: 23px;
+                height: 23px;
+                background: none;
+                border: 1.5px solid #a3a3a3;
+                color: #a3a3a3;
+                border-radius: 50%;
+                font-size: 17.66px;
+              }
+
+              .product__amount {
+                height: 25px;
+                font-family: var(--mt400);
+                font-size: 22.82px;
+                color: #a3a3a3;
+              }
+            }
+          }
+
+          .product__order--btn {
+            padding: 13px 52px;
+            border-radius: 84.37px;
+            font-family: var(--mt500);
+            font-size: 17.45px;
+            color: #fff;
+          }
+        }
+
+        .menu__popular--title {
+          background-image: url(/src/assets/images/menu_most_popular_pizza_bg.png);
+          width: 100%;
+          height: 286px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          font-family: var(--mt500);
+          font-size: 43.86px;
+          color: #ffffff;
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }

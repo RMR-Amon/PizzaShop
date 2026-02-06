@@ -11,6 +11,21 @@
   padding: 0 15px;
 }
 
+:root {
+  --white: #fff;
+  --grey: #a3a3a3;
+  --a400: "AlexBrush-Regular";
+  --m300: "Montserrat-Light";
+  --m400: "Montserrat-Regular";
+  --m500: "Montserrat-Medium";
+  --m600: "Montserrat-SemiBold";
+  --m700: "Montserrat-Bold";
+  --mt400: "Muller-Trial-Regular";
+  --mt500: "Muller-Trial-Medium";
+  --mt700: "Muller-Trial-Bold";
+  --mt800: "Muller-Trial-ExtraBold";
+}
+
 html {
   scroll-behavior: smooth;
 }

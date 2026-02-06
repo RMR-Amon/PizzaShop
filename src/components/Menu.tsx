@@ -85,7 +85,9 @@ const Menu = () => {
 
                   <div className="product__purchase">
                     <p className="product__price">
-                      {product.price}
+                      {product.amount > 0
+                        ? (product.price * product.amount).toFixed(2)
+                        : product.price}
                       <span>$</span>
                     </p>
 

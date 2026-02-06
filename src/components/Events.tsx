@@ -5,7 +5,7 @@ import coffee from "../assets/images/cofee.png";
 import eggAndBacon from "../assets/images/egg and bacon.png";
 const Events = () => {
   return (
-    <section className="events" id="Events">
+    <section className="events" id="events">
       <div className="container">
         <div className="events__box">
           <div className="events__card card">

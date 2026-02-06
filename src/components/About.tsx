@@ -3,7 +3,7 @@ import about_main_pizza from "../assets/images/about__pizza.png";
 
 const About = () => {
   return (
-    <section className="about" id="AboutUs">
+    <section className="about" id="aboutus">
       <div className="container">
         <div className="about__box">
           <div className="about__info--box">

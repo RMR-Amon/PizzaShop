@@ -4,6 +4,7 @@ import fastest__arrow from "../assets/images/intro__fastest_arrow.png";
 import intro__img from "../assets/images/Intro_pizza_img.png";
 import info__play from "../assets/images/info__play.png";
 import intro__arrow__toMenu from "../assets/images/intro__arrow--toMenu.png";
+import { Link } from "react-router";
 
 const Intro = () => {
   const [active, setActive] = useState(false);
@@ -17,15 +18,18 @@ const Intro = () => {
             </h1>
             <p className="intro__text">
               We will deliver juicy pizza for your family in 30 minutes, if the
-              courier is late
-              <span>- pizza is free!</span>
+              courier is late -<span> pizza is free!</span>
             </p>
             <div className="info__box">
               <h3 className="info__title">Cooking process:</h3>
-              <div className="info__box--images">
+              <Link
+                target="blank"
+                to="https://youtu.be/LVI8veUnSLQ?si=njAji7HuN93dgLOl"
+                className="info__box--images"
+              >
                 <img src={info__img} alt="Cooking process image" />
                 <img src={info__play} alt="" className="info__play" />
-              </div>
+              </Link>
             </div>
             <div className="info__btns">
               <button
