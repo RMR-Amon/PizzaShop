@@ -14,22 +14,22 @@ const Footer = () => {
             <ul className="footer__list">
               <h3 className="footer__title">Home</h3>
               <li>
-                <a href="#!" className="footer__link">
+                <a href="#menu" className="footer__link">
                   To Order
                 </a>
               </li>
               <li>
-                <a href="#!" className="footer__link">
+                <a href="#aboutus" className="footer__link">
                   About us
                 </a>
               </li>
               <li>
-                <a href="#!" className="footer__link">
+                <a href="#events" className="footer__link">
                   Events
                 </a>
               </li>
               <li>
-                <a href="" className="footer__link">
+                <a href="#menu" className="footer__link">
                   Menu
                 </a>
               </li>
@@ -37,17 +37,17 @@ const Footer = () => {
             <ul className="footer__list">
               <h3 className="footer__title">Events</h3>
               <li>
-                <a href="#!" className="footer__link">
+                <a href="#events" className="footer__link">
                   3 Pizza 1 Free Coffee
                 </a>
               </li>
               <li>
-                <a href="#!" className="footer__link">
+                <a href="#events" className="footer__link">
                   2 Pizza for 1 Price
                 </a>
               </li>
               <li>
-                <a href="#!" className="footer__link">
+                <a href="#events" className="footer__link">
                   Kitchen Tour
                 </a>
               </li>
@@ -55,22 +55,22 @@ const Footer = () => {
             <ul className="footer__list">
               <h3 className="footer__title">Menu</h3>
               <li>
-                <a href="#!" className="footer__link">
+                <a href="#menu" className="footer__link">
                   Show All
                 </a>
               </li>
               <li>
-                <a href="#!" className="footer__link">
+                <a href="#menu" className="footer__link">
                   Seaproducts
                 </a>
               </li>
               <li>
-                <a href="#!" className="footer__link">
+                <a href="#menu" className="footer__link">
                   Vegan
                 </a>
               </li>
               <li>
-                <a href="" className="footer__link">
+                <a href="#menu" className="footer__link">
                   Meat
                 </a>
               </li>
@@ -78,12 +78,12 @@ const Footer = () => {
             <ul className="footer__list">
               <h3 className="footer__title">About Us</h3>
               <li>
-                <a href="#!" className="footer__link">
+                <a href="#aboutus" className="footer__link">
                   Our History
                 </a>
               </li>
               <li>
-                <a href="#!" className="footer__link">
+                <a href="#aboutus" className="footer__link">
                   Why We?
                 </a>
               </li>

@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import Nav from "./components/Nav";
 import Intro from "./components/Intro";
-import Menu from "./components/Menu";
 import Events from "./components/Events";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Authentication from "./pages/authentication";
+import Menu from "./components/Menu";
 
 const App = () => {
   return (

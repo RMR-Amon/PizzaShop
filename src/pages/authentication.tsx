@@ -1,4 +1,8 @@
 import { useState } from "react";
+import google from "../assets/images/login_google.svg";
+import facebook from "../assets/images/login_facebook.svg";
+import github from "../assets/images/login_github.svg";
+import linkedin from "../assets/images/login_linkedin.svg";
 
 const Authentication = () => {
   const [isActive, setIsActive] = useState(false);
@@ -11,17 +15,17 @@ const Authentication = () => {
             <h1>Create Account</h1>
 
             <div className="auth__socials">
-              <a href="#">
-                <i className="fa-brands fa-google-plus-g" />
+              <a href="#login">
+                <img src={google} alt="" />
               </a>
-              <a href="#">
-                <i className="fa-brands fa-facebook-f" />
+              <a href="#login">
+                <img src={facebook} alt="" />
               </a>
-              <a href="#">
-                <i className="fa-brands fa-github" />
+              <a href="#login">
+                <img src={github} alt="" />
               </a>
-              <a href="#">
-                <i className="fa-brands fa-linkedin-in" />
+              <a href="#login">
+                <img src={linkedin} alt="" />
               </a>
             </div>
 
@@ -33,22 +37,24 @@ const Authentication = () => {
           </form>
         </div>
 
-        <div className={`auth__form auth__form--signin ${isActive ? "hidden": ""}`}>
+        <div
+          className={`auth__form auth__form--signin ${isActive ? "hidden" : ""}`}
+        >
           <form>
             <h1>Sign In</h1>
 
             <div className="auth__socials">
-              <a href="#">
-                <i className="fa-brands fa-google-plus-g" />
+              <a href="#login">
+                <img src={google} alt="" />
               </a>
-              <a href="#">
-                <i className="fa-brands fa-facebook-f" />
+              <a href="#login">
+                <img src={facebook} alt="" />
               </a>
-              <a href="#">
-                <i className="fa-brands fa-github" />
+              <a href="#login">
+                <img src={github} alt="" />
               </a>
-              <a href="#">
-                <i className="fa-brands fa-linkedin-in" />
+              <a href="#login">
+                <img src={linkedin} alt="" />
               </a>
             </div>
 
