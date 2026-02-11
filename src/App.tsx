@@ -16,7 +16,7 @@ const App = () => {
             path="/"
             element={
               <>
-                <Nav />
+                <Nav /> 
                 <Intro />
                 <main className="main">
                   <Menu />

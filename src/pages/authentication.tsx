@@ -1,17 +1,53 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import google from "../assets/images/login_google.svg";
 import facebook from "../assets/images/login_facebook.svg";
 import github from "../assets/images/login_github.svg";
 import linkedin from "../assets/images/login_linkedin.svg";
+import axios from "axios";
+import { useNavigate } from "react-router";
+
+interface IUsers_Data {
+  id: number;
+  name: string;
+  email: string;
+  password: string;
+}
 
 const Authentication = () => {
   const [isActive, setIsActive] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  useEffect(() => {
+    const users_data: IUsers_Data[] = axios.get(
+      "https://69896f24c04d974bc69f3b4c.mockapi.io/Users_data",
+    );
+  }, []);
 
+  const handleRegister = (e: React.FormEvent) => {
+    e.preventDefault();
+    const user = { name, email, password };
+    axios.post("https://69896f24c04d974bc69f3b4c.mockapi.io/Users_data", user);
+
+    if (name != "" && password != "" && email != "") {
+      navigate("/");
+    }
+  };
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    const user = { email, password };
+    axios.post("https://69896f24c04d974bc69f3b4c.mockapi.io/Users_data", user);
+
+    if (password != "" && email != "") {
+      navigate("/");
+    }
+  };
   return (
     <div className="auth__page">
       <div className={`auth ${isActive ? "active" : ""}`}>
         <div className="auth__form auth__form--signup">
-          <form>
+          <form onSubmit={handleRegister}>
             <h1>Create Account</h1>
 
             <div className="auth__socials">
@@ -28,19 +64,30 @@ const Authentication = () => {
                 <img src={linkedin} alt="" />
               </a>
             </div>
-
             <span>or use your email for registration</span>
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <button type="button">Sign Up</button>
+            <input
+              type="text"
+              placeholder="Name"
+              onChange={(e) => setName(e.target.value)}
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button type="submit">Sign Up</button>
           </form>
         </div>
 
         <div
           className={`auth__form auth__form--signin ${isActive ? "hidden" : ""}`}
         >
-          <form>
+          <form onSubmit={handleLogin}>
             <h1>Sign In</h1>
 
             <div className="auth__socials">
@@ -62,7 +109,7 @@ const Authentication = () => {
             <input type="email" placeholder="Email" />
             <input type="password" placeholder="Password" />
             <a href="#">Forget Your Password?</a>
-            <button type="button">Sign In</button>
+            <button type="submit">Sign In</button>
           </form>
         </div>
 

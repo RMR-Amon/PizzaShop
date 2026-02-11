@@ -114,19 +114,6 @@
     /* SOCIAL */
     &__socials {
       margin: 20px 0;
-      animation: Oppacity 5s infinite ease-in-out;
-
-      @keyframes Oppacity {
-        0% {}
-
-        50% {
-          opacity: 1;
-        }
-
-        100% {
-          opacity: 0;
-        }
-      }
 
       a {
         width: 40px;
