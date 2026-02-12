@@ -14,35 +14,56 @@ interface IUsers_Data {
 }
 
 const Authentication = () => {
+  const [data, setData] = useState<IUsers_Data[]>([]);
   const [isActive, setIsActive] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   useEffect(() => {
-    const users_data: IUsers_Data[] = axios.get(
-      "https://69896f24c04d974bc69f3b4c.mockapi.io/Users_data",
-    );
+    const getData = async () => {
+      try {
+        const response = await axios.get<IUsers_Data[]>(
+          "https://69896f24c04d974bc69f3b4c.mockapi.io/Users_data",
+        );
+
+        setData(response.data);
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    };
+
+    getData();
   }, []);
 
   const handleRegister = (e: React.FormEvent) => {
     e.preventDefault();
     const user = { name, email, password };
-    axios.post("https://69896f24c04d974bc69f3b4c.mockapi.io/Users_data", user);
-
     if (name != "" && password != "" && email != "") {
+      axios.post(
+        "https://69896f24c04d974bc69f3b4c.mockapi.io/Users_data",
+        user,
+      );
       navigate("/");
     }
   };
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    const user = { email, password };
-    axios.post("https://69896f24c04d974bc69f3b4c.mockapi.io/Users_data", user);
 
-    if (password != "" && email != "") {
+    const user = data.find(
+      (person) =>
+        person.email.toLowerCase() === email.toLowerCase() &&
+        person.password === password,
+    );
+
+    if (user) {
       navigate("/");
+    } else {
+      alert("User not found");
     }
+    return;
   };
+
   return (
     <div className="auth__page">
       <div className={`auth ${isActive ? "active" : ""}`}>
@@ -106,8 +127,16 @@ const Authentication = () => {
             </div>
 
             <span>or use your email password</span>
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
+            <input
+              type="email"
+              placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
             <a href="#">Forget Your Password?</a>
             <button type="submit">Sign In</button>
           </form>
