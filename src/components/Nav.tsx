@@ -1,6 +1,5 @@
 import { Link } from "react-router";
 import basket from "../assets/images/basket.svg";
-
 const Nav = () => {
   return (
     <nav className="nav" id="home">
@@ -32,12 +31,16 @@ const Nav = () => {
             </li>
           </ul>
           <div className="nav__pages">
-            <Link to="/login" aria-label="login_button" className="nav__login--btn">
+            <Link
+              to="/login"
+              aria-label="login_button"
+              className="nav__login--btn"
+            >
               Log in
             </Link>
             <Link
-              to="/"
-              aria-label="basket_button"
+              to="/basket"
+              aria-label="basket_buttom"
               className="nav__basket--btn"
             >
               <img src={basket} alt="" />

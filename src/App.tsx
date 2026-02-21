@@ -4,8 +4,9 @@ import Intro from "./components/Intro";
 import Events from "./components/Events";
 import About from "./components/About";
 import Footer from "./components/Footer";
-import Authentication from "./pages/authentication";
 import Menu from "./components/Menu";
+import Authentication from "./pages/Authentication";
+import Basket from "./pages/Basket";
 
 const App = () => {
   return (
@@ -16,7 +17,7 @@ const App = () => {
             path="/"
             element={
               <>
-                <Nav /> 
+                <Nav />
                 <Intro />
                 <main className="main">
                   <Menu />
@@ -28,6 +29,7 @@ const App = () => {
             }
           />
           <Route path="/login" element={<Authentication />} />
+          <Route path="/basket" element={<Basket />} />
         </Routes>
       </BrowserRouter>
     </div>

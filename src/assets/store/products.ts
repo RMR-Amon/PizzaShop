@@ -13,7 +13,7 @@ interface IProduct_size {
   size: number;
   active: boolean;
 }
-interface IMenu_products {
+export interface IMenu_products {
   id: number;
   img: string;
   title: string;

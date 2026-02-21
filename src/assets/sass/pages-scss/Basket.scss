@@ -1,0 +1,46 @@
+.basket {
+    &__bottom {
+        .basket__card {
+            display: flex;
+
+            .card__left {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .card__img {
+                    width: 200px;
+                    height: 200px;
+                }
+
+                .card__title {
+                    font-family: var(--mt800);
+                    letter-spacing: 1px;
+                    font-size: 30px;
+                    color: #fff;
+                    line-height: 100%;
+                }
+
+                .card__desc {
+                    width: 60%;
+                    font-family: var(--mt400);
+                    font-size: 16px;
+                    color: gray;
+                }
+
+                .card__price {
+                    font-family: var(--mt400);
+                    font-size: 25px;
+                    letter-spacing: 1px;
+                    line-height: 100%;
+                    color: #fff;
+
+                    &::after {
+                        content: "$";
+                        font-family: Arial;
+                    }
+                }
+            }
+        }
+    }
+}

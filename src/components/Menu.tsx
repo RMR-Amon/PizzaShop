@@ -1,41 +1,10 @@
 import { Fragment, useState } from "react";
 import { menu_buttons } from "../assets/store/menu__btns";
-import { menu_products } from "../assets/store/products";
+import { useProduct } from "../assets/Context/useProduct";
 
 const Menu = () => {
   const [activeBtn, setActiveBtn] = useState<number>(menu_buttons[0].id);
-  const [products, setProducts] = useState(menu_products);
-
-  const handleSizeClick = (productId: number, sizeId: number) => {
-    setProducts((prev) =>
-      prev.map((product) =>
-        product.id === productId
-          ? {
-              ...product,
-              size: product.size.map((s) => ({
-                ...s,
-                active: s.id === sizeId,
-              })),
-            }
-          : product,
-      ),
-    );
-  };
-  function changeAmount(productId: number, type: "plus" | "minus") {
-    setProducts((prev) =>
-      prev.map((product) =>
-        productId == product.id
-          ? {
-              ...product,
-              amount:
-                type === "plus"
-                  ? product.amount + 1
-                  : Math.max(0, product.amount - 1),
-            }
-          : product,
-      ),
-    );
-  }
+  const { products, changeAmount, handleSizeClick } = useProduct();
   return (
     <section className="menu" id="menu">
       <div className="container">
