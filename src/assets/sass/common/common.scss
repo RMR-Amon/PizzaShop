@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1253px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+:root {
+  --white: #fff;
+  --grey: #a3a3a3;
+  --a400: "AlexBrush-Regular";
+  --m300: "Montserrat-Light";
+  --m400: "Montserrat-Regular";
+  --m500: "Montserrat-Medium";
+  --m600: "Montserrat-SemiBold";
+  --m700: "Montserrat-Bold";
+  --mt400: "Muller-Trial-Regular";
+  --mt500: "Muller-Trial-Medium";
+  --mt700: "Muller-Trial-Bold";
+  --mt800: "Muller-Trial-ExtraBold";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background: linear-gradient(245.71deg,
+      #1e0c00 4.96%,
+      #1f0700 33.7%,
+      #170a00 68.41%,
+      #1e0d00 96.42%);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  scrollbar-width: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+  background: linear-gradient(261.69deg, #ff5d29 12.12%, #fe9c1c 86.72%);
+
+  &:active {
+    transform: scale(0.8);
+  }
+}
+
+.title {
+  font-family: var(--mt800);
+  font-size: 69.17px;
+  color: #fff;
+  text-align: center;
+}
+
+.logo {
+  font-family: var(--mt800);
+  font-size: 34.06px;
+  line-height: 110%;
+  background: linear-gradient(90deg,
+      #ff6432,
+      #ffa228,
+      #ff6432,
+      #ffa228,
+      #ff6432);
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: gradientFlow 6s linear infinite;
+
+  @keyframes gradientFlow {
+    0% {
+      background-position: 200% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}

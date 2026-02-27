@@ -1,0 +1,107 @@
+.intro {
+  margin-top: 41px;
+  &__box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    &--info {
+      .intro__title {
+        max-width: 538px;
+        font-family: var(--mt800);
+        font-size: 69.17px;
+        color: var(--white);
+      }
+
+      .intro__text {
+        max-width: 411px;
+        font-family: var(--mt400);
+        font-size: 19.56px;
+        color: var(--grey);
+        margin-top: 12px;
+        margin-bottom: 23px;
+
+        span {
+          color: #fff;
+        }
+      }
+
+      .info__box {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        .info__title {
+          font-family: var(--mt400);
+          font-size: 19.56px;
+          color: var(--grey);
+        }
+
+        &--images {
+          width: fit-content;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .info__play {
+            position: absolute;
+          }
+        }
+      }
+
+      .info__btns {
+        position: relative;
+        display: flex;
+        align-items: center;
+        background: transparent;
+        border: 2px solid #ff8a1f;
+        border-radius: 999px;
+        width: max-content;
+        margin-top: 58px;
+
+        .info__btn--order,
+        .info__btn--menu {
+          position: relative;
+          padding: 16px 72px;
+          font-size: 18px;
+          border: none;
+          background: transparent;
+          color: #ff8a1f;
+          cursor: pointer;
+          border-radius: 999px;
+          z-index: 1;
+
+          font-family: var(--mt500);
+          font-size: 22.44px;
+        }
+
+        .info__btn--order.active,
+        .info__btn--menu.active {
+          background: linear-gradient(90deg, #ff5d29, #ff9b1c);
+          color: white;
+          z-index: 2;
+        }
+
+        .info__btn--menu {
+          margin-left: -20px;
+        }
+
+        .intro__arrow__toMenu {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          transform: translate(120%, 60%);
+        }
+      }
+    }
+
+    .intro__img1 {
+      width: 500px;
+      cursor: pointer;
+      &:active {
+        transition: 0.5s;
+        transform: scale(0.8);
+      }
+    }
+  }
+}
